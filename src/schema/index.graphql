@@ -1,0 +1,4 @@
+type Query {
+  contract(id: String!): Contract
+  search(q: String!): [Contract!]!
+}
