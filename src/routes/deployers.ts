@@ -8,6 +8,7 @@ export async function deployerRoutes(app: FastifyInstance, pool: Pool) {
       'SELECT * FROM contracts WHERE deployer = $1 ORDER BY deploy_ledger DESC LIMIT 100',
       [address],
     );
-    return { contracts: res.rows, count: res.rowCount };
+    const verified = res.rows.filter((r) => r.verified).length;
+    return { contracts: res.rows, count: res.rowCount, verifiedCount: verified };
   });
 }
