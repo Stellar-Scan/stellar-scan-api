@@ -1,0 +1,3 @@
+# GraphQL
+
+Query `contract(id)`.
