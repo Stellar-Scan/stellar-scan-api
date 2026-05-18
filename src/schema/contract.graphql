@@ -1,0 +1,6 @@
+type Contract {
+  contractId: String!
+  deployer: String
+  verified: Boolean
+  tags: [String!]
+}

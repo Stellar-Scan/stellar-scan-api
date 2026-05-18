@@ -1,0 +1,1 @@
+type Deployer { address: String! contractCount: Int }
